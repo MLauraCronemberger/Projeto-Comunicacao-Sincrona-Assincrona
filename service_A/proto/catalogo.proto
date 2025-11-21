@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package catalogo;
+
+service InfosLivroService {
+  rpc GetInfosLivro (LivroRequest) returns (InfosResponse);
+}
+
+message LivroRequest {
+  string livro_id = 1; 
+}
+
+message InfosResponse {
+  string titulo = 1;
+  string genero = 2;
+  string sinopse = 3;
+  int32 ano_lancamento = 4;
+  string idioma_original = 5;
+  
+}
+
