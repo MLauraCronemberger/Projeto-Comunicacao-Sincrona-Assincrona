@@ -3,15 +3,13 @@ package com.example.demo;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients
 @EnableRabbit
-public class BookHubApplication {
+public class MediaAdaptationServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BookHubApplication.class, args);
+		SpringApplication.run(MediaAdaptationServiceApplication.class, args);
 	}
 
 }
