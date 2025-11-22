@@ -2,15 +2,15 @@ package com.example.demo.domain.servicec;
 
 public class InfoLivroResponse {
 	
-    private String livro_id;
+    private int livro_id;
     private DadosLivro dados_livro;
     private DadosAutor dados_autor;
     
     
-	public String getLivro_id() {
+	public int getLivro_id() {
 		return livro_id;
 	}
-	public void setLivro_id(String livro_id) {
+	public void setLivro_id(int livro_id) {
 		this.livro_id = livro_id;
 	}
 	public DadosLivro getDados_livro() {
