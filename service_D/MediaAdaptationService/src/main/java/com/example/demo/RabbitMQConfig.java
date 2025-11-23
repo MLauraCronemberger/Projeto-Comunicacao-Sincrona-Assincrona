@@ -33,9 +33,6 @@ public class RabbitMQConfig {
         factory.setConnectionFactory(connectionFactory);
 
         
-        // 🚨 CONFIGURAÇÃO SIMPLIFICADA COM JACKSON 🚨
-        // O Jackson2JsonMessageConverter já sabe como lidar com application/json
-        // e como desserializar para o tipo de objeto que o seu @RabbitListener espera.
         factory.setMessageConverter(new Jackson2JsonMessageConverter());
 
         
