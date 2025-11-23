@@ -10,14 +10,13 @@ import com.example.demo.domain.servicec.AllLivros;
 import com.example.demo.domain.servicec.InfoLivroResponse;
 
 @FeignClient(name= "service-c-api", url="http://localhost:8000")
-public interface CFeignClient {
+public interface ServiceCFeignClient {
 	
 	@GetMapping("/all-livros")
 	List<AllLivros> get_lista_livros();
 	
 	@GetMapping("/infos-livro/{livro_id}")
 	InfoLivroResponse get_dados_sincronos(@PathVariable("livro_id") int livro_id);
-	
 	
 
 }
