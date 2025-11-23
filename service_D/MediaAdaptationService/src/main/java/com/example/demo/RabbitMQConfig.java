@@ -52,35 +52,6 @@ public class RabbitMQConfig {
 
         return factory;
     }
-
-//    @Bean
-//    public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(
-//            ConnectionFactory connectionFactory) {
-//
-//        SimpleRabbitListenerContainerFactory factory =
-//                new SimpleRabbitListenerContainerFactory();
-//
-//        factory.setConnectionFactory(connectionFactory);
-//
-//        
-//        // foi preciso criar um converter para fazer contentType.startsWith("text")...
-//        // pq isso vem nulo quando publica mensagem pelo painel do rabbit
-//        factory.setMessageConverter(new SafeSimpleMessageConverter());
-//
-//        
-//        // resolve o problema inicial do "priority nulo"
-//        factory.setAfterReceivePostProcessors((Message message) -> {
-//            MessageProperties props = message.getMessageProperties();
-//            if (props != null) {
-//                if (props.getPriority() == null) {
-//                    props.setPriority(0);
-//                }
-//            }
-//            return message;
-//        });
-//
-//        return factory;
-//    }
     
 }
 
