@@ -14,14 +14,8 @@ public class MediaAdaptationService {
 		noticias_adaptacoes.add(nova_noticia);
 	}
 	
-	public List<MediaAdaptation> listar_noticias(int livro_id){
-		List<MediaAdaptation> resultado_filtrado = new ArrayList<>();
-	    for (MediaAdaptation adaptacao : noticias_adaptacoes) {
-	        if (adaptacao.getLivro_id() == livro_id) {
-	            resultado_filtrado.add(adaptacao);
-	        }
-	    }
-	    return resultado_filtrado;
+	public List<MediaAdaptation> listar_noticias(){
+	    return noticias_adaptacoes;
 	}
 	
 
